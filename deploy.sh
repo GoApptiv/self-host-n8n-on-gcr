@@ -25,9 +25,9 @@ else
     export GCP_PROJECT_ID="$GCP_PROJECT_ID_INPUT"
 fi
 
-export GCP_REGION="${TF_VAR_gcp_region:-us-west2}"
-export AR_REPO_NAME="${TF_VAR_artifact_repo_name:-n8n-repo}"
-export SERVICE_NAME="${TF_VAR_cloud_run_service_name:-n8n}"
+export GCP_REGION="${TF_VAR_gcp_region:-asia-south1}"
+export AR_REPO_NAME="${TF_VAR_artifact_repo_name:-n8n-community-edition}"
+export SERVICE_NAME="${TF_VAR_cloud_run_service_name:-n8n-workflow-automation}"
 
 export IMAGE_TAG="${GCP_REGION}-docker.pkg.dev/${GCP_PROJECT_ID}/${AR_REPO_NAME}/${SERVICE_NAME}:latest"
 

@@ -7,7 +7,7 @@ variable "gcp_project_id" {
 variable "gcp_region" {
   description = "Google Cloud region for deployment."
   type        = string
-  default     = "us-west2" # Defaulting to your region
+  default     = "asia-south1" # Defaulting to your region
 }
 
 variable "db_name" {
@@ -22,28 +22,19 @@ variable "db_user" {
   default     = "n8n-user"
 }
 
-variable "db_password" {
-  description = "Password for the Cloud SQL database user. Will be stored in Secret Manager."
+variable "db_password_secret_name" {
+  description = "Name of the Secret Manager secret storing DB password"
   type        = string
-  sensitive   = true
 }
 
-variable "n8n_encryption_key" {
-  description = "Encryption key for n8n. Will be stored in Secret Manager."
+variable "db_instance_name" {
+  description = "Name of the Cloud SQL database instance"
   type        = string
-  sensitive   = true
 }
 
-variable "db_tier" {
-  description = "Cloud SQL instance tier."
+variable "encryption_key_secret_name" {
+  description = "Name of the Secret Manager secret storing N8N encryption key"
   type        = string
-  default     = "db-f1-micro"
-}
-
-variable "db_storage_size" {
-  description = "Cloud SQL instance storage size in GB."
-  type        = number
-  default     = 10
 }
 
 variable "artifact_repo_name" {

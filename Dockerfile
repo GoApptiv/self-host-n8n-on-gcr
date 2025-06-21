@@ -1,4 +1,6 @@
-FROM docker.n8n.io/n8nio/n8n:latest
+FROM sagarv1997/n8n:1.99.3
+# Using internal n8n image as base image
+LABEL maintainer="Sagar Vaghela"
 
 # Copy the script and ensure it has proper permissions
 COPY startup.sh /
