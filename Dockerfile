@@ -1,4 +1,4 @@
-FROM sagarv1997/n8n:1.99.3
+FROM sagarv1997/n8n:1.99.1
 # Using internal n8n image as base image
 LABEL maintainer="Sagar Vaghela"
 
