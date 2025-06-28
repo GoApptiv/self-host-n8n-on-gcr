@@ -27,7 +27,7 @@ fi
 
 export GCP_REGION="${TF_VAR_gcp_region:-asia-south1}"
 export AR_REPO_NAME="${TF_VAR_artifact_repo_name:-n8n-community-edition}"
-export SERVICE_NAME="${TF_VAR_cloud_run_service_name:-n8n-workflow-automation}"
+export SERVICE_NAME="${TF_VAR_cloud_run_service_name:-n8n-staging-workflows}"
 
 export IMAGE_TAG="${GCP_REGION}-docker.pkg.dev/${GCP_PROJECT_ID}/${AR_REPO_NAME}/${SERVICE_NAME}:latest"
 
